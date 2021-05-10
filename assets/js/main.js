@@ -116,10 +116,38 @@ console.log(zucCorta);
 Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
  */
 
-function capovolta(testo){
+/* function capovolta(testo){
 
     var stringa = testo.reverse();
     return stringa;
 }
 
 capovolta("ciao");
+ */
+
+/* Snack 4:
+Scrivi una funzione che fonda due array (aventi lo stesso numero di elementi)
+prendendo alternativamente gli elementi da uno e dall’altro
+es. [a,b,c], [1,2,3] → [a,1,b,2,c,3]. */
+
+var lettere = ["a","b","c","d"];
+var numeri = [1,2,3,4];
+var fusione = [];
+
+function mista (lettere,numeri){
+
+    for(var i = 0; i < lettere.length; i++){
+
+        fusione.push(lettere[i]);
+
+
+        for(var i = 0; i < numeri.length; i++){
+            fusione.push(numeri[i]);
+        }
+
+    }
+}
+
+mista(lettere,numeri);
+console.log(fusione);
+

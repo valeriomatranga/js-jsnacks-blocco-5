@@ -151,12 +151,26 @@ Scrivi una funzione che accetti tre argomenti:
 un array e due numeri (“a” più piccolo di “b” e “b” grande al massimo quanto il numero di elementi dell’array).
 La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra “a” e “b” */
 
-function snack([],numero1,numero2){
-    numero1 < numero2;
-    numero2 = [].length;
-    return  [] - numero1 - numero2; 
+function filerArray(lista,min,max){
+    var nuovoArray = [];
+    
+    for (var i = 0; i < lista.length; i++){
+
+        if(min <= i && max >= i){
+            nuovoArray.push(lista[i]);
+        }
+    }
+    console.log(lista,min,max);
+    
+    return nuovoArray;
 
 }
 
-var newSnack = snack([11,23,35,41,58],1,5);
-console.log(newSnack);
+var nomi = ['vale','filippo','marco','giorgio','simone','carlo','zorro','giulia'];
+var min = 1;
+var max = 3;
+filerArray(nomi,min,max);
+
+var risultato = filerArray(nomi,min,max);
+ 
+console.log(risultato);

@@ -116,14 +116,14 @@ console.log(zucCorta);
 Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
  */
 
-/* function capovolta(testo){
+function capovolta(testo){
 
-    var stringa = testo.reverse();
-    return stringa;
+    return testo.split("").reverse().join("");
 }
 
-capovolta("ciao");
- */
+var risultato = capovolta("ciao");
+console.log(risultato);
+
 
 /* Snack 4:
 Scrivi una funzione che fonda due array (aventi lo stesso numero di elementi)
@@ -139,15 +139,24 @@ function mista (lettere,numeri){
     for(var i = 0; i < lettere.length; i++){
 
         fusione.push(lettere[i]);
-
-
-        for(var i = 0; i < numeri.length; i++){
-            fusione.push(numeri[i]);
-        }
-
+        fusione.push(numeri[i]);
     }
 }
 
 mista(lettere,numeri);
 console.log(fusione);
 
+/* Snack 5:
+Scrivi una funzione che accetti tre argomenti:
+un array e due numeri (“a” più piccolo di “b” e “b” grande al massimo quanto il numero di elementi dell’array).
+La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra “a” e “b” */
+
+function snack([],numero1,numero2){
+    numero1 < numero2;
+    numero2 = [].length;
+    return  [] - numero1 - numero2; 
+
+}
+
+var newSnack = snack([11,23,35,41,58],1,5);
+console.log(newSnack);
